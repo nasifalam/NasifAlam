@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>HEInspector</title>
+  <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
+</head>
+
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+
+
+<body>
+<h1> Heavy Equipment Inspection Tool</h1>
+
+<h3> Create Equipment List </h3>
+
+<h4> Project Infromation </h4>
+<label for="location">Project Location</label><br>
+  <input type="text" id="location" name="Location"><br> <br>
+<label for="client">Client Name</label><br>
+<input type="text" id="client" name="client"><br> <br>
+
+
+<h4>Equipments Database</h4>
+<p> Create the list of your equipments </p>
+
+
+
+  <label for="equipmentBrand">Equipment Brand</label>
+  <select name="equipmentBrand" id="equipmentBrand">
+    <option value="Sandvik">Sandvik</option>
+    <option value="Atlas Copco">Atlas Copco</option>
+    <option value="Caterpillar">Caterpilllar</option>
+    <option value="John Deere">John Deere</option>
+  </select>
+
+  <label for="equipmentType">Equipment Type</label>
+  <select name="equipmentType" id="equipmentType">
+    <option value="Truck">Truck</option>
+    <option value="Loader Haulage">Loader Haulage</option>
+    <option value="Driller">Driller</option>
+  </select>
+</select>
+<label for="equipmentModel">Equipment Model</label>
+<select name="equipmentModel" id="equipmentModel">
+  <option value="LH514">LH514</option>
+  <option value="TH551">TH511</option>
+  <option value="DS411">DS411</option>
+</select>
+
+<button onclick="add()">Add</button>
+
+
+
+<ol id="EquipmentsDatabase">
+</ol>
+
+<script>
+
+
+function add() {
+    var x = document.createElement("LI");
+    var m = document.getElementById("client").value + " | "+  document.getElementById("location").value + " | "+ document.getElementById("equipmentBrand").value + " | " + document.getElementById("equipmentType").value+ " | " + document.getElementById("equipmentModel").value;
+    var t = document.createTextNode(m);
+    x.appendChild(t);
+    document.getElementById("EquipmentsDatabase").appendChild(x);
+
+  //;
+}
+
+
+
+</script>
+
+</body>
+
+</html>
