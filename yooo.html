@@ -25,9 +25,9 @@
 
 <h4> Project Infromation </h4>
 <label for="location">Project Location</label><br>
-  <input type="text" id="location" name="Location" value="Montregie"><br> <br>
+  <input type="text" id="location" name="Location"><br> <br>
 <label for="client">Client Name</label><br>
-<input type="text" id="client" name="client" value="TrumpSucks"><br> <br>
+<input type="text" id="client" name="client"><br> <br>
 
 
 <h4>Equipments Database</h4>
@@ -69,7 +69,7 @@
 
 function add() {
     var x = document.createElement("LI");
-    var m = document.getElementById("equipmentBrand").value + " | " + document.getElementById("equipmentType").value+ " | " + document.getElementById("equipmentModel").value;
+    var m = document.getElementById("client").value + " | "+  document.getElementById("location").value + " | "+ document.getElementById("equipmentBrand").value + " | " + document.getElementById("equipmentType").value+ " | " + document.getElementById("equipmentModel").value;
     var t = document.createTextNode(m);
     x.appendChild(t);
     document.getElementById("EquipmentsDatabase").appendChild(x);
